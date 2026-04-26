@@ -1,0 +1,432 @@
+/* ============================================
+   Zad Linktree - Professional Styling
+   Brand Colors:
+   - Primary Green: #4e9242
+   - Light Green/Yellow: #c6c14a
+   - Dark Olive: #5e7334
+   - Dark Navy: #041f1e
+   - Cream/Beige: #f8e3b6
+   - Orange: #db7d0b
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8e3b6 0%, #f5dfa8 50%, #f1d89a 100%);
+    color: #041f1e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(4, 31, 30, 0.15);
+    overflow: hidden;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+
+.header {
+    background: linear-gradient(135deg, #4e9242 0%, #5e7334 100%);
+    padding: 50px 30px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(198, 193, 74, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.logo-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo:hover {
+    animation: none;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.brand-name {
+    font-size: 48px;
+    font-weight: 700;
+    color: #f8e3b6;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.brand-tagline {
+    font-size: 16px;
+    color: #f8e3b6;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   MAIN CONTENT SECTION
+   ============================================ */
+
+.main-content {
+    padding: 40px 20px;
+}
+
+.links-section {
+    width: 100%;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ============================================
+   LINK CARDS
+   ============================================ */
+
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.link-card:hover::before {
+    left: 100%;
+}
+
+.link-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.link-card:hover .link-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.link-text {
+    flex: 1;
+    z-index: 1;
+}
+
+.link-text h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.link-text p {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Color Variations for Different Link Types */
+
+.link-card.instagram {
+    background: linear-gradient(135deg, #E4405F 0%, #D81B60 100%);
+    box-shadow: 0 8px 25px rgba(228, 64, 95, 0.3);
+}
+
+.link-card.instagram:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(228, 64, 95, 0.4);
+}
+
+.link-card.website {
+    background: linear-gradient(135deg, #4e9242 0%, #3d7033 100%);
+    box-shadow: 0 8px 25px rgba(78, 146, 66, 0.3);
+}
+
+.link-card.website:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(78, 146, 66, 0.4);
+}
+
+.link-card.whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.link-card.whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+}
+
+.link-card.facebook {
+    background: linear-gradient(135deg, #1877F2 0%, #0A66C2 100%);
+    box-shadow: 0 8px 25px rgba(24, 119, 242, 0.3);
+}
+
+.link-card.facebook:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(24, 119, 242, 0.4);
+}
+
+.link-card.tiktok {
+    background: linear-gradient(135deg, #000000 0%, #25F4EE 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.link-card.tiktok:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.link-card.email {
+    background: linear-gradient(135deg, #db7d0b 0%, #c6614a 100%);
+    box-shadow: 0 8px 25px rgba(219, 125, 11, 0.3);
+}
+
+.link-card.email:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(219, 125, 11, 0.4);
+}
+
+.link-card.catalog {
+    background: linear-gradient(135deg, #c6c14a 0%, #a89f3a 100%);
+    box-shadow: 0 8px 25px rgba(198, 193, 74, 0.3);
+    color: #041f1e;
+}
+
+.link-card.catalog:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(198, 193, 74, 0.4);
+}
+
+.link-card.catalog .link-text h3,
+.link-card.catalog .link-text p {
+    color: #041f1e;
+}
+
+.link-card.newsletter {
+    background: linear-gradient(135deg, #5e7334 0%, #4e9242 100%);
+    box-shadow: 0 8px 25px rgba(94, 115, 52, 0.3);
+}
+
+.link-card.newsletter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(94, 115, 52, 0.4);
+}
+
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, #041f1e 0%, #1a3a39 100%);
+    color: #f8e3b6;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #4e9242;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.footer-tagline {
+    font-size: 12px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 480px) {
+    .container {
+        border-radius: 20px;
+    }
+
+    .header {
+        padding: 40px 20px 30px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .brand-name {
+        font-size: 40px;
+    }
+
+    .brand-tagline {
+        font-size: 14px;
+    }
+
+    .main-content {
+        padding: 30px 15px;
+    }
+
+    .link-card {
+        padding: 18px 20px;
+        gap: 15px;
+    }
+
+    .link-icon {
+        font-size: 28px;
+    }
+
+    .link-text h3 {
+        font-size: 15px;
+    }
+
+    .link-text p {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 25px 15px;
+    }
+
+    .footer p {
+        font-size: 13px;
+    }
+
+    .footer-tagline {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .brand-name {
+        font-size: 32px;
+    }
+
+    .link-card {
+        padding: 15px 15px;
+        gap: 12px;
+    }
+
+    .link-icon {
+        font-size: 24px;
+    }
+
+    .link-text h3 {
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .link-card {
+        page-break-inside: avoid;
+    }
+}
