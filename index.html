@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" type="image/png" href="favicon.png">
+
     <title>زاد - Zad</title>
 
     <!-- CSS -->
@@ -26,31 +29,34 @@
                 <img src="logo.png" alt="Zad Logo" class="logo">
             </div>
 
-            <h1 class="brand-name" id="brandName">زاد</h1>
+            <h1 class="brand-name" id="brandName">
+                زاد
+            </h1>
 
             <p class="brand-tagline" id="tagline">
                 خير يزيد في كل لقمة
             </p>
 
-<!-- Language Toggle -->
-<div class="language-toggle">
+            <!-- Language Toggle -->
+            <div class="language-toggle">
 
-    <div class="toggle-switch"
-        onclick="toggleLanguage()">
+                <div class="toggle-switch"
+                    onclick="toggleLanguage()">
 
-        <div class="switch-circle"></div>
+                    <div class="switch-circle"></div>
 
-        <span class="lang-text">
-            AR
-        </span>
+                    <span class="lang-text">
+                        AR
+                    </span>
 
-        <span class="lang-text">
-            EN
-        </span>
+                    <span class="lang-text">
+                        EN
+                    </span>
 
-    </div>
+                </div>
 
-</div>
+            </div>
+
         </header>
 
         <!-- Main Content -->
@@ -70,6 +76,7 @@
                         </div>
 
                         <div class="link-text">
+
                             <h3 class="title">
                                 تابعنا على إنستجرام
                             </h3>
@@ -77,6 +84,7 @@
                             <p class="desc">
                                 أحدث المنتجات والعروض
                             </p>
+
                         </div>
 
                     </a>
@@ -91,6 +99,7 @@
                         </div>
 
                         <div class="link-text">
+
                             <h3 class="title">
                                 زيارة الموقع الرسمي
                             </h3>
@@ -98,6 +107,7 @@
                             <p class="desc">
                                 تصفح كل منتجاتنا
                             </p>
+
                         </div>
 
                     </a>
@@ -112,6 +122,7 @@
                         </div>
 
                         <div class="link-text">
+
                             <h3 class="title">
                                 تواصل معنا على واتس
                             </h3>
@@ -119,6 +130,7 @@
                             <p class="desc">
                                 للاستفسارات والطلبات
                             </p>
+
                         </div>
 
                     </a>
@@ -133,6 +145,7 @@
                         </div>
 
                         <div class="link-text">
+
                             <h3 class="title">
                                 صفحتنا على فيسبوك
                             </h3>
@@ -140,6 +153,7 @@
                             <p class="desc">
                                 تفاعل مع مجتمعنا
                             </p>
+
                         </div>
 
                     </a>
@@ -154,6 +168,7 @@
                         </div>
 
                         <div class="link-text">
+
                             <h3 class="title">
                                 شاهدنا على تيك توك
                             </h3>
@@ -161,9 +176,35 @@
                             <p class="desc">
                                 محتوى ممتع وحصري
                             </p>
+
                         </div>
 
                     </a>
+
+
+<!-- Location -->
+<a href="https://maps.app.goo.gl/TBUoGaxeQNvcwhFr5"
+    target="_blank"
+    class="link-card location">
+
+    <div class="link-icon">
+        <i class="fa-solid fa-location-dot"></i>
+    </div>
+
+    <div class="link-text">
+
+        <h3 class="title">
+            موقعنا على الخريطة
+        </h3>
+
+        <p class="desc">
+            زور أقرب فرع بسهولة
+        </p>
+
+    </div>
+
+</a>
+
 
                 </div>
 
@@ -187,136 +228,146 @@
     </div>
 
     <!-- Translation Script -->
-<script>
+    <script>
 
-    let currentLang = "ar";
+        let currentLang = "ar";
 
-    const translations = {
+        const translations = {
 
-        ar: {
+            ar: {
 
-            brand: "زاد",
+                brand: "زاد",
 
-            tagline: "خير يزيد في كل لقمة",
+                tagline: "خير يزيد في كل لقمة",
 
-            titles: [
+                titles: [
 
-                "تابعنا على إنستجرام",
+                    "تابعنا على إنستجرام",
 
-                "زيارة الموقع الرسمي",
+                    "زيارة الموقع الرسمي",
 
-                "تواصل معنا على واتس",
+                    "تواصل معنا على واتس",
 
-                "صفحتنا على فيسبوك",
+                    "صفحتنا على فيسبوك",
 
-                "شاهدنا على تيك توك"
-            ],
+                    "شاهدنا على تيك توك",
 
-            descs: [
+                    "موقعنا على الخريطة"
+                ],
 
-                "أحدث المنتجات والعروض",
+                descs: [
 
-                "تصفح كل منتجاتنا",
+                    "أحدث المنتجات والعروض",
 
-                "للاستفسارات والطلبات",
+                    "تصفح كل منتجاتنا",
 
-                "تفاعل مع مجتمعنا",
+                    "للاستفسارات والطلبات",
 
-                "محتوى ممتع وحصري"
-            ]
-        },
+                    "تفاعل مع مجتمعنا",
 
-        en: {
+                    "محتوى ممتع وحصري",
 
-            brand: "ZAD",
+                    "زور أقرب فرع بسهولة"
+                ]
+            },
 
-            tagline: "Goodness in Every Bite",
+            en: {
 
-            titles: [
+                brand: "ZAD",
 
-                "Follow us on Instagram",
+                tagline: "Goodness in Every Bite",
 
-                "Visit Our Website",
+                titles: [
 
-                "Contact us on WhatsApp",
+                    "Follow us on Instagram",
 
-                "Our Facebook Page",
+                    "Visit Our Website",
 
-                "Watch us on TikTok"
-            ],
+                    "Contact us on WhatsApp",
 
-            descs: [
+                    "Our Facebook Page",
 
-                "Latest products & offers",
+                    "Watch us on TikTok",
 
-                "Browse all our products",
+                    "Find Us on Maps"
+                ],
 
-                "For orders & inquiries",
+                descs: [
 
-                "Join our community",
+                    "Latest products & offers",
 
-                "Fun & exclusive content"
-            ]
-        }
-    };
+                    "Browse all our products",
 
-    function applyLanguage(lang) {
+                    "For orders & inquiries",
 
-        document.documentElement.lang = lang;
+                    "Join our community",
 
-        document.documentElement.dir =
-            lang === "ar" ? "rtl" : "ltr";
+                    "Fun & exclusive content",
 
-        const t = translations[lang];
+                    "Visit our location easily"
+                ]
+            }
+        };
 
-        document.getElementById("brandName")
-            .innerText = t.brand;
+        function applyLanguage(lang) {
 
-        document.getElementById("tagline")
-            .innerText = t.tagline;
+            document.documentElement.lang = lang;
 
-        const titles =
-            document.querySelectorAll(".title");
+            document.documentElement.dir =
+                lang === "ar" ? "rtl" : "ltr";
 
-        const descs =
-            document.querySelectorAll(".desc");
+            const t = translations[lang];
 
-        titles.forEach((title, index) => {
+            document.getElementById("brandName")
+                .innerText = t.brand;
 
-            title.innerText = t.titles[index];
+            document.getElementById("tagline")
+                .innerText = t.tagline;
 
-        });
+            const titles =
+                document.querySelectorAll(".title");
 
-        descs.forEach((desc, index) => {
+            const descs =
+                document.querySelectorAll(".desc");
 
-            desc.innerText = t.descs[index];
+            titles.forEach((title, index) => {
 
-        });
+                title.innerText = t.titles[index];
 
-    }
+            });
 
-    function toggleLanguage() {
+            descs.forEach((desc, index) => {
 
-        const toggle =
-            document.querySelector(".toggle-switch");
+                desc.innerText = t.descs[index];
 
-        if (currentLang === "ar") {
+            });
 
-            currentLang = "en";
-
-            toggle.classList.add("active");
-
-        } else {
-
-            currentLang = "ar";
-
-            toggle.classList.remove("active");
         }
 
-        applyLanguage(currentLang);
-    }
+        function toggleLanguage() {
 
-</script>
+            const toggle =
+                document.querySelector(".toggle-switch");
+
+            if (currentLang === "ar") {
+
+                currentLang = "en";
+
+                toggle.classList.add("active");
+
+            } else {
+
+                currentLang = "ar";
+
+                toggle.classList.remove("active");
+            }
+
+            applyLanguage(currentLang);
+        }
+
+    </script>
+
 </body>
 
 </html>
+

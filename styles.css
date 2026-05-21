@@ -527,3 +527,63 @@ body {
 
     user-select: none;
 }
+
+
+
+/* ===== LOCATION CARD FIX ===== */
+
+.link-card.location {
+
+    background: linear-gradient(135deg, #14532d, #22c55e) !important;
+
+    color: #fff !important;
+
+    border: none;
+
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+}
+
+/* النص */
+
+.link-card.location .title,
+.link-card.location .desc {
+
+    color: #ffffff !important;
+}
+
+/* دائرة الأيقونة */
+
+.link-card.location .link-icon {
+
+    background: rgba(255, 255, 255, 0.18) !important;
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+/* أيقونة اللوكيشن */
+
+.link-card.location .link-icon i {
+
+    color: #ffffff !important;
+
+    font-size: 24px;
+}
+
+/* Hover */
+
+.link-card.location:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(34, 197, 94, 0.35);
+}
